@@ -1,0 +1,25 @@
+@import "../base.css";
+
+.main-content {
+    -fx-background-color: blue-shade-1;
+    -fx-padding: 30px 90px 90px 90px;
+}
+
+.section-text {
+    -fx-fill: text-color;
+    -fx-font-weight: normal;
+    -fx-font-size: 1.2em;
+}
+
+.signup-button {
+    -fx-background-color: blue-shade-1;
+    -fx-background-radius: 0;
+    -fx-text-fill: text-color;
+    -fx-font-weight: bolder;
+    -fx-font-size: 1.2em;
+    -fx-padding: 10px 20px 10px 20px;
+}
+
+.signup-button:hover {
+    -fx-background-color: blue-shade-2;
+}

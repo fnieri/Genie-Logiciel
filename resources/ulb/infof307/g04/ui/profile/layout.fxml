@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g04.view.HomeViewController">
+    <content>
+        <BorderPane styleClass="root">
+            <top>
+                <HBox styleClass="navbar" spacing="5" alignment="CENTER_LEFT">
+                    <Label text="Q" styleClass="q-logo-navbar" />
+                    <Button styleClass="navbar-button" fx:id="navBtnHome" onAction="#handleNavButton" text="Home" />
+                    <Button styleClass="navbar-button" fx:id="navBtnStatistics" onAction="#handleNavButton" text="Statistics"/>
+                    <Button styleClass="navbar-button" fx:id="navBtnStore" onAction="#handleNavButton" text="Store" />
+                    <Button styleClass="navbar-button" fx:id="navBtnSettings" onAction="#handleNavButton" text="Settings" />
+                </HBox>
+            </top>
+
+            <center>
+                <StackPane styleClass="main-content" fx:id="menus">
+                    <fx:include source="./profile.fxml" />
+                </StackPane>
+            </center>
+
+            <stylesheets>
+                <URL value="@home.css" />
+            </stylesheets>
+        </BorderPane>
+    </content>
+</ScrollPane>

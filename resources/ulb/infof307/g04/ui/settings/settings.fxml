@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ButtonBar?>
+
+<VBox spacing="32" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g04.view.SettingsViewController">
+    <VBox spacing="8">
+        <HBox>
+            <Text styleClass="section-title" text="User information" />
+        </HBox>
+        <GridPane styleClass="property-list, section-content-box">
+            <Text styleClass="property-item, property-key" text="Username" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Text fx:id="usernameText" styleClass="property-item" text="John Doe" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+            <Text styleClass="property-item, property-key" text="Description" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Text styleClass="property-item" text="Unkown Men" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+        </GridPane>
+    </VBox>
+    <VBox spacing="8"> 
+        <HBox>
+            <Text styleClass="section-title" text="Change password" />
+        </HBox>
+        <VBox spacing="8" styleClass="section-content-box">
+            <VBox spacing="4">
+                <Label text="Old password" />
+                <PasswordField fx:id="oldPasswordField" styleClass="input" />
+            </VBox>
+            
+            <VBox spacing="4">
+                <Label text="New password"/>
+                <PasswordField fx:id="newPasswordField" styleClass="input" />
+            </VBox>
+            
+            <VBox spacing="4">
+                <Label text="Confirm new password" />
+                <PasswordField fx:id="confirmPasswordField" styleClass="input" />
+            </VBox>
+
+            <ButtonBar>
+                <buttons>
+                    <Button fx:id="passwordSaveBtn" onAction="#handlePasswordSaveBtn" styleClass="btn" text="Save" ButtonBar.buttonData="OK_DONE" />
+                    <Button fx:id="passwordCancelBtn" onAction="#handlePasswordCancelBtn" styleClass="btn, btn-warning" text="Cancel" ButtonBar.buttonData="CANCEL_CLOSE" />
+                </buttons>
+            </ButtonBar>
+        </VBox>
+    </VBox>
+    <stylesheets>
+        <URL value="@settings.css" />
+    </stylesheets>
+</VBox>

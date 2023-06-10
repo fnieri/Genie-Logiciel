@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import java.net.URL?>
+<?import ulb.infof307.g04.widgets.components.LearningModeCardComponent?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g04.view.LearningViewController" spacing="16" alignment="CENTER" maxWidth="600">
+    <HBox alignment="CENTER_LEFT" spacing="30">
+        <Text fx:id="deckName" styleClass="section-title"/>
+        <Button fx:id="speakerBtn" styleClass="btn" text="Listen to the question" onAction="#handleSpeakerBtn" />
+        <Button fx:id="GameRulesBtn" styleClass="btn" text="How to study" onAction="#handleRulesBtn" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT">
+        <Text fx:id="scoreText" styleClass="section-subtitle" text="Score : " />
+    </HBox>
+    <LearningModeCardComponent fx:id="cardComponent" />
+    <stylesheets>
+        <URL value="@learning.css" />
+    </stylesheets>
+</VBox>

@@ -1,0 +1,70 @@
+stages:
+  - build
+  - test
+
+variables:
+  WORKFLOW_TYPE: ''
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: ($CI_PIPELINE_SOURCE == "push" && ($CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $CI_COMMIT_BRANCH == "dev"))
+
+# Job for Java FX
+.client:
+  image: maven:3.9-eclipse-temurin-19
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .m2/repository
+
+build-client:
+  extends: .client
+  stage: build
+  script:
+    - mvn clean
+    - mvn compile
+    - mvn install
+
+test-client:
+  extends: .client
+  stage: test
+  needs: ["build-client"]
+  script:
+    - mvn test
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+
+# Job for Django
+.build-server:
+  image:
+    name: gcr.io/kaniko-project/executor:v1.9.2-debug
+    entrypoint: [""]
+  stage: build
+
+build-only-server:
+  extends: .build-server
+  script:
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}/quick_mem_serv"
+      --dockerfile "${CI_PROJECT_DIR}/quick_mem_serv/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}"
+      --no-push
+  only:
+    - merge_requests
+
+build-push-server:
+  extends: .build-server
+  script:
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}/quick_mem_serv"
+      --dockerfile "${CI_PROJECT_DIR}/quick_mem_serv/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}"
+  only:
+    - pushes
+    - main
+    - dev

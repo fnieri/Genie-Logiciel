@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
+    <Text fx:id="pagesText" styleClass="card-text,card-page" text="1/15" />
+    <VBox styleClass="card" spacing="24" alignment="CENTER">
+        <VBox fx:id="cardDetailsBox" spacing="16" alignment="CENTER">
+            <!-- NOTE: Content is here is generated dynamically -->
+        </VBox>
+        <HBox alignment="CENTER" spacing="32">
+            <Button fx:id="prevBtn" styleClass="btn,card-btn" text="Previous" onAction="#handleGotoPrevQuestion" />
+            <VBox HBox.hgrow="ALWAYS" alignment="CENTER">
+                <Button fx:id="flipBtn" styleClass="btn,card-btn" text="Flip" onAction="#handleFlipCard" />
+            </VBox> <!-- NOTE: This adds space between the 2 buttons -->
+            <Button fx:id="nextBtn" styleClass="btn,card-btn" text="Next" onAction="#handleGotoNextQuestion" />
+        </HBox>
+    </VBox>
+
+    <Text fx:id="askknowledge" styleClass="section-subtitle" text="How is your knowledge of the answer ?" />
+    <HBox alignment="CENTER" spacing="32">
+        <Button fx:id="veryBadBtn" styleClass="btn,card-btn" text="Very bad" onAction="#handleMasteryButton" />
+        <Button fx:id="badBtn" styleClass="btn,card-btn" text="Bad" onAction="#handleMasteryButton" />
+        <Button fx:id="averageBtn" styleClass="btn,card-btn" text="Average" onAction="#handleMasteryButton" />
+        <Button fx:id="goodBtn" styleClass="btn,card-btn" text="Good" onAction="#handleMasteryButton" />
+        <Button fx:id="veryGoodBtn" styleClass="btn,card-btn" text="Very good" onAction="#handleMasteryButton" />
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</fx:root>

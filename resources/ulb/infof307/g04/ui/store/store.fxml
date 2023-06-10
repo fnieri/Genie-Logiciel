@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+
+<VBox spacing="28" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g04.view.StoreViewController">
+    <HBox fx:id="titleBox" styleClass="section-subtitle-box" spacing="120" alignment="CENTER_LEFT">
+        <Text styleClass="section-title" text="Most Popular Decks"/>
+    </HBox>
+
+    <HBox fx:id="deckCarrousel" spacing="60" styleClass="section-content-box" alignment="CENTER">
+        <Button fx:id="prevBtn" styleClass="btn,card-btn" text="Previous" onAction="#handleGotoPrev" />
+        <HBox fx:id="deckBatch" alignment="CENTER" spacing="60">
+            <!-- add most popular decks here -->
+        </HBox>
+        <Button fx:id="nextBtn" styleClass="btn,card-btn" text="Next" onAction="#handleGotoNext" />
+    </HBox>
+
+    <HBox spacing="11" alignment="CENTER_LEFT" >
+
+        <HBox styleClass="section-subtitle-box" spacing="120" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" >
+            <Text styleClass="section-title" text="Catalog"/>
+        </HBox>
+
+        <HBox fx:id="deckSpotlight" spacing="58"  alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+            <TextField fx:id="spotlight" alignment="CENTER_LEFT" promptText="Search" />
+        </HBox>
+
+    </HBox>
+
+    <VBox fx:id="deckList" spacing="30" styleClass="section-content-box" alignment="CENTER_LEFT">
+            <!-- decks will goes here (checkout controller) -->
+    </VBox>
+
+    <stylesheets>
+        <URL value="@store.css" />
+    </stylesheets>
+</VBox>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+
+<VBox spacing="8" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g04.view.ProfileViewController">
+    <HBox fx:id="optionsBox" styleClass="section-subtitle-box" spacing="120" alignment="CENTER_LEFT">
+        <Text  styleClass="section-title" text="Your decks"/>
+        <Button styleClass="btn" text="Create deck" onAction="#handleDeckCreation"/>
+        <Button styleClass="btn" text="Import deck" onAction="#handleDeckImport"/>
+    </HBox>
+<!--    <ScrollPane fitToWidth="true" fitToHeight="true" styleClass="section-content-box">-->
+        <VBox fx:id="deckList" spacing="10" styleClass="section-content-box">
+            <!-- decks will goes here (checkout controller) -->
+        </VBox>
+<!--    </ScrollPane>-->
+    <stylesheets>
+        <URL value="@profile.css" />
+    </stylesheets>
+</VBox>
+

@@ -1,0 +1,16 @@
+<?import java.net.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
+    <VBox fx:id="cardDetailsBox" minWidth="0">
+        <!-- NOTE: Content is here is generated dynamically -->
+    </VBox>
+    <HBox spacing="10" alignment="BOTTOM_RIGHT">
+        <Button styleClass="btn" text="Edit" onAction="#onCardEdit" />
+        <Button styleClass="btn, btn-warning" text="Delete" onAction="#onCardDelete" />
+    </HBox>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</fx:root>

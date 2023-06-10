@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ButtonBar?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<VBox spacing="32" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g04.view.StatisticsViewController">
+    <VBox spacing="8">
+        <HBox>
+            <Text styleClass="section-title" text="Global Statistics" />
+        </HBox>
+        <GridPane styleClass="property-list, section-content-box">
+            <Text styleClass="property-item, property-key" text="Global Time of study" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Text fx:id="studyTimeAllTimeText" styleClass="property-item"  GridPane.rowIndex="0" GridPane.columnIndex="1" />
+            <Text styleClass="property-item, property-key" text="Number of Decks" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Text fx:id="deckNumber" styleClass="property-item" text="DeckNumber" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Text styleClass="property-item, property-key" text="Number of Deck studied" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <Text fx:id="numberDeckStudied" styleClass="property-item" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            <Text styleClass="property-item, property-key" text="Favorite Decks" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <Text fx:id="favoriteDecks" styleClass="property-item" text="Favorite Decks" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+        </GridPane>
+    </VBox>
+    <VBox spacing="8">
+
+        <HBox>
+            <Text styleClass="section-title" text="Time Spent " />
+        </HBox>
+        <GridPane styleClass="section-content-box" minHeight="300">
+            <LineChart fx:id="lineChartTime" styleClass="property-item" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS">
+                <xAxis>
+                    <CategoryAxis fx:id="xAxisTime" side="BOTTOM"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxisTime" side="LEFT" />
+                </yAxis>
+            </LineChart>
+        </GridPane>
+        <HBox>
+            <Text styleClass="section-title" text="Deck Statistics" />
+        </HBox>
+        <GridPane styleClass="property-list, section-content-box">
+            <Text styleClass="property-item, property-key" text="Deck Name" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <ComboBox fx:id="deckNameComboBox" onAction="#handleDeckNameComboBox" promptText="No Deck Selected" styleClass="property-item" GridPane.rowIndex="0" GridPane.columnIndex="1" /> <!--TODO: obternir la liste des decks d'un utilisateur dans la combobox -->
+
+            <Text styleClass="property-item, property-key" text="Deck Study sessions" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Text fx:id="NumOfSess" styleClass="property-item" text="No Deck Selected"  GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Text styleClass="property-item, property-key" text="Deck Mastery" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <Text fx:id="DeckMastery" styleClass="property-item" text="No Deck Selected" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+        </GridPane>
+        <HBox>
+            <Text styleClass="section-title" text="Deck Mastery " />
+        </HBox>
+        <GridPane styleClass="section-content-box" minHeight="300">
+            <Text fx:id="noDeckSelectedMastery" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS" styleClass="section-title"> No Deck Selected</Text>
+
+            <LineChart fx:id="lineChartMastery" styleClass="property-item" visible="false" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS">
+                <xAxis>
+                    <CategoryAxis fx:id="xAxisMastery" side="BOTTOM"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxisMastery" side="LEFT" />
+                </yAxis>
+            </LineChart>
+        </GridPane>
+        <HBox>
+            <Text styleClass="section-title" text="Deck Session " />
+        </HBox>
+        <GridPane styleClass="section-content-box, property-item" minHeight="300">
+            <Text fx:id="noDeckSelectedSession" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS" styleClass="section-title" > No Deck Selected</Text>
+            <LineChart fx:id="lineChartSession" styleClass="property-item" visible="false" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS">
+                <xAxis>
+                    <CategoryAxis fx:id="xAxisSession" side="BOTTOM"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxisSession" side="LEFT" />
+                </yAxis>
+            </LineChart>
+        </GridPane>
+
+    </VBox>
+    <stylesheets>
+        <URL value="@statistics.css" />
+    </stylesheets>
+</VBox>

@@ -1,0 +1,39 @@
+<?import java.net.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+    <VBox fx:id="deckDetailsBox" styleClass="deckDetailsBox" spacing="15" minWidth="0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+        <TextFlow fx:id="deckName" styleClass="deck-name" VBox.vgrow="ALWAYS">
+            <children>
+                <Text fx:id="deckNameText" text="Deck Name" styleClass="deck-name" wrappingWidth="Infinity"/>
+            </children>
+        </TextFlow><!-- TextFlow is used to allow for text wrapping -->
+        <TextFlow fx:id="tags" styleClass="deck-theme" VBox.vgrow="ALWAYS">
+            <children>
+                <Text fx:id="tagsText" text="a,bunch,of,tags" styleClass="deck-theme" wrappingWidth="Infinity"/>
+            </children>
+        </TextFlow>
+        <Button fx:id="shareBtn" text="Share" styleClass="btn" onAction="#onDeckShare"/>
+    </VBox>
+    <HBox fx:id="buttonsBox" spacing="10" HBox.hgrow="ALWAYS" alignment="BOTTOM_RIGHT">
+        <Button fx:id="study" text="Study" styleClass="btn" onAction="#onDeckStudy"/>
+        <Button fx:id="free" text="Free" styleClass="btn" onAction="#onDeckFree"/>
+        <Button fx:id="review" text="Review" styleClass="btn" onAction="#onDeckReview"/>
+        <Button fx:id="edit" text="Edit" styleClass="btn" onAction="#onDeckEdit"/>
+        <Button fx:id="delete" text="Delete" styleClass="btn, btn-warning" onAction="#handleDeckDeletion"/>
+        <SplitMenuButton fx:id="exportButton" text="Export">
+            <items>
+                <MenuItem fx:id="exportPDF" text="PDF (.pdf)" onAction="#OnDeckPdfExport"/>
+                <MenuItem fx:id="exportJson" text="JSON (.json)" onAction="#onDeckJsonExport"/>
+            </items>
+        </SplitMenuButton>
+    </HBox>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</fx:root>

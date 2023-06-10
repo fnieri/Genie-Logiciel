@@ -1,0 +1,54 @@
+@import "../base.css";
+
+.btn-correct-answer {
+    -fx-background-color: green;
+}
+
+.card {
+    -fx-background-color: blue-shade-4;
+    -fx-padding: 30px 10px 30px 10px;
+}
+
+.card-text {
+    -fx-fill: white;
+}
+
+.card-page {
+    -fx-font-size: 14px;
+    -fx-weight: 600;
+}
+
+.card-question {
+    -fx-font-size: 32px;
+    -fx-weight: 700;
+}
+
+.card-answer {
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+}
+
+.card-btn {
+    -fx-background-color: blue-shade-2;
+}
+
+.card-btn:disabled {
+    -fx-opacity: 0.5;
+}
+
+.button {
+    -fx-background-color: blue-shade-2;
+    -fx-text-fill: white;
+}
+
+.wrong-answer {
+    -fx-background-color: red;
+}
+
+.good-answer {
+    -fx-background-color: green;
+}
+
+.answer-btn {
+    -fx-background-color: white;
+}

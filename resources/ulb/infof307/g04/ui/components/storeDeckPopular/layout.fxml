@@ -1,0 +1,22 @@
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import java.net.*?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
+    <VBox spacing="5" alignment="CENTER">
+        <Text fx:id="deckName" styleClass="text-deckName" text="DECK NAME" />
+        <Text fx:id="deckTags" styleClass="text-color" text="DECK TAGS" />
+        <Text fx:id="deckAuthor" styleClass="text-color" text="DECK AUTHOR" />
+        <Text fx:id="deckDownloads" styleClass="text-color" text="DECK DOWNLOADS" />
+    </VBox>
+    <VBox spacing="5" alignment="CENTER">
+        <Button styleClass="btn" onAction="#handleDownloadButton" text="Download" />
+    </VBox>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</fx:root>

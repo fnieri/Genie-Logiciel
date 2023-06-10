@@ -1,0 +1,38 @@
+@import "../base.css";
+
+.section-line {
+    -fx-padding: 0px 0 10px 0;
+}
+
+.section-text {
+    -fx-fill: text-color;
+    -fx-font-weight: normal;
+    -fx-font-size: 1.2em;
+}
+
+
+.debug {
+    -fx-border-width: 2px;
+    -fx-border-color: red;
+}
+
+.deck-name {
+    -fx-fill: text-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.3em;
+}
+
+.deck-theme {
+    -fx-fill: text-color;
+    -fx-font-weight: normal;
+    -fx-font-size: 1.2em;
+}
+
+.deckDetailsBox {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #c0c0c0;
+    font-family: sans-serif;
+    padding: 20px;
+}
+

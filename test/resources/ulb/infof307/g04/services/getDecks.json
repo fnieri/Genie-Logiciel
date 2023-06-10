@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "name": "deck1",
+    "tags": [
+      "ref"
+    ],
+    "users": [
+      "ismael"
+    ],
+    "cards": [
+      {
+        "id": 13,
+        "question": "ergerg",
+        "question_type": "text",
+        "answer": "gergreg",
+        "answer_type": "text",
+        "deck": 5,
+        "mastery_level": 3
+      },
+      {
+        "id": 14,
+        "question": "gergre",
+        "question_type": "text",
+        "answer": "gerg",
+        "answer_type": "text",
+        "deck": 5,
+        "mastery_level": 3
+      },
+      {
+        "id": 15,
+        "question": "gergreg",
+        "question_type": "text",
+        "answer": "egregeg",
+        "answer_type": "text",
+        "deck": 5,
+        "mastery_level": 3
+      }
+    ],
+    "study_sessions": 5,
+    "mastery_level": 1.0,
+    "study_duration": "229.027726",
+    "mastery_level_by_day": {
+      "2023-05-13": 1.0,
+      "2023-05-14": 1.0
+    },
+    "study_sessions_by_day": {
+      "2023-05-13": 3,
+      "2023-05-14": 1
+    }
+  },
+  {
+    "id": 2,
+    "name": "deck2",
+    "tags": [
+      "fe"
+    ],
+    "users": [
+      "ismael"
+    ],
+    "cards": [
+      {
+        "id": 16,
+        "question": ",y,yjyt",
+        "question_type": "text",
+        "answer": "jyujuyj",
+        "answer_type": "text",
+        "deck": 6,
+        "mastery_level": 3
+      },
+      {
+        "id": 17,
+        "question": "jyujyuj",
+        "question_type": "text",
+        "answer": "jyujyuj",
+        "answer_type": "text",
+        "deck": 6,
+        "mastery_level": 3
+      }
+    ],
+    "study_sessions": 2,
+    "mastery_level": 1.0,
+    "study_duration": "10.0",
+    "mastery_level_by_day": {
+      "2023-05-13": 1.0
+    },
+    "study_sessions_by_day": {
+      "2023-05-13": 2
+    }
+  }
+]

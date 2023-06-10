@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+  quick_mem_serv:
+    image: quick_mem_serv
+    volumes:
+      - static_volume:/app/static
+      - logs_volume:/var/log/quick_mem_serv
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_NAME=database_name
+      - POSTGRES_USER=database_user
+      - POSTGRES_HOST=quick_mem_db
+      - POSTGRES_PASSWORD=db_passwd
+      - SUPERUSER_USERNAME=admin
+      - SUPERUSER_PASSWORD=password
+      - SUPERUSER_EMAIL=admin@example.com
+      # - DOMAIN_NAME=www.example.com
+    networks:
+      - quickmemserv_net
+    depends_on:
+      - quick_mem_db
+
+  quick_mem_db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=database_name
+      - POSTGRES_USER=database_user
+      - POSTGRES_PASSWORD=db_passwd
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - quickmemserv_net
+
+  quick_mem_nginx:
+    image: nginx:1.24.0
+    ports:
+      - "80:80"
+    volumes:
+      - static_volume:/usr/share/nginx/html/static
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - quickmemserv_net
+    depends_on:
+      - quick_mem_serv
+
+networks:
+  quickmemserv_net:
+
+volumes:
+  static_volume:
+  logs_volume:
+  db_data:

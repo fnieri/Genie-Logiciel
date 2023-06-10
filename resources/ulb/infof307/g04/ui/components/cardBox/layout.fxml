@@ -1,0 +1,12 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml" spacing="50" styleClass="section-line" alignment="CENTER" HBox.hgrow="ALWAYS">
+    <VBox fx:id="cardDetailsBox" minWidth="0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+    </VBox>
+    <HBox fx:id="buttonsBox" spacing="10" HBox.hgrow="ALWAYS" alignment="BOTTOM_RIGHT">
+        <Button fx:id="editButton" styleClass="btn" text="Edit" onAction="#onCardEdit" />
+        <Button fx:id="deleteButton" styleClass="btn, btn-warning" text="Delete" onAction="#onCardDelete" />
+    </HBox>
+
+</fx:root>

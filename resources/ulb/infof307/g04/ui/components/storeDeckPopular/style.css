@@ -1,0 +1,32 @@
+.section-store-box {
+    -fx-padding: 1.5em;
+    -fx-border-width: 2px;
+    -fx-border-color: red-shade-1;
+}
+
+.text-color {
+    -fx-fill: text-color
+}
+
+.text-deckName {
+    -fx-font-size: 22px;
+    -fx-fill: text-color;
+    -fx-font-weight: bold;
+}
+
+.btn {
+    -fx-background-color: blue-shade-4;
+    -fx-font-weight: medium;
+    -fx-text-fill: text-color;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+.btn:hover {
+    -fx-background-color: blue-shade-3;
+    -fx-opacity: 1;
+}
+
+.btn:armed {
+    -fx-opacity: 1;
+}

@@ -1,0 +1,17 @@
+@import "../base.css";
+
+.section-store-box {
+    -fx-padding: 1.5em;
+    -fx-border-width: 2px;
+    -fx-border-color: red-shade-1;
+}
+
+.text-color {
+    -fx-fill: text-color
+}
+
+.text-deckName {
+    -fx-font-size: 22px;
+    -fx-fill: text-color;
+    -fx-font-weight: bold;
+}

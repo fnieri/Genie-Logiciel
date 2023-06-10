@@ -1,0 +1,23 @@
+@import "../../base.css";
+
+
+.section-line {
+    -fx-padding: 0px 0 10px 0;
+}
+
+.card-question {
+    -fx-fill: text-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.3em;
+}
+
+.card-answer {
+    -fx-fill: text-color;
+    -fx-font-weight: normal;
+    -fx-font-size: 1.2em;
+}
+
+.debug {
+    -fx-border-width: 2px;
+    -fx-border-color: red;
+}

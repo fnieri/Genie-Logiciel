@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml">
+    <VBox fx:id="deckData">
+        <Text fx:id="deckName" styleClass="text-deckName"/>
+        <HBox fx:id="deckProperty" HBox.hgrow="ALWAYS" spacing="11" alignment="CENTER_LEFT">
+            <Text fx:id="deckTags" styleClass="text-color"/>
+            <Text styleClass="text-color" text="|" />
+            <Text fx:id="deckAuthor" styleClass="text-color"/>
+            <Text styleClass="text-color" text="|" />
+            <Text fx:id="deckDownloads" styleClass="text-color"/>
+        </HBox>
+    </VBox>
+    <HBox fx:id="deckBtn" HBox.hgrow="ALWAYS" alignment="CENTER_RIGHT">
+        <Button fx:id="downloadBtn" text="Download" styleClass="btn" onAction="#onDownload" />
+    </HBox>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</fx:root>

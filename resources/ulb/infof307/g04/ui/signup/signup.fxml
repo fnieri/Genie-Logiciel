@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+
+
+<?import java.net.URL?>
+<VBox fx:controller="ulb.infof307.g04.view.SignUpViewController" fx:id="signUpContainerVBox" styleClass="main-content" spacing="10.0" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="signUpTitle" text="Sign up" styleClass="login-title" alignment="CENTER" textFill="white" />
+   <Label text="Q" styleClass="q-logo-login"/>
+   <VBox styleClass="section-content-box">
+      <Label fx:id="usernameLabel" text="Username" alignment="CENTER_LEFT" styleClass="section-text" textFill="white"></Label>
+      <TextField fx:id="usernameSignup" alignment="CENTER_LEFT" promptText="Your username" />
+   </VBox>
+   <VBox styleClass="section-content-box">
+      <Label fx:id="createPasswordLabel" text="Create Password" alignment="CENTER_LEFT" styleClass="section-text" textFill="white"></Label>
+      <PasswordField fx:id="createPasswordSignup" alignment="CENTER_LEFT" promptText="Your password" />
+   </VBox>
+   <VBox styleClass="section-content-box">
+      <Label fx:id="confirmPasswordLabel" text="Confirm Password" alignment="CENTER_LEFT" styleClass="section-text" textFill="white"></Label>
+      <PasswordField fx:id="confirmPasswordSignup" alignment="CENTER_LEFT" promptText="Confirm your password" />
+   </VBox>
+   <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUp" styleClass="btn" text="Sign up" />
+   <HBox alignment="CENTER" spacing="5.0">
+      <Label fx:id="signUpTextLabel" text="Already have an account?" styleClass="label" textFill="white"/>
+      <Label fx:id="loginSwitchViewLabel" text="Sign In" styleClass="label" textFill="limegreen" onMouseClicked="#goToLogin" style="-fx-cursor: hand"/>
+   </HBox>
+   <stylesheets>
+      <URL value="@signup.css" />
+   </stylesheets>
+</VBox>

@@ -1,0 +1,33 @@
+@import "../base.css";
+
+.label {
+    -fx-text-fill: text-color;
+    -fx-font-size: 16px;
+    -fx-opacity: 0.9;
+}
+
+.input {
+    -fx-font-size: 14px;
+}
+
+.section {
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-border-color: blue-shade-5;
+    -fx-border-style: dashed;
+    -fx-padding: 16px;
+}
+
+.property-list {
+    -fx-hgap: 16px;
+    -fx-vgap: 8px;
+}
+
+.property-key {
+    -fx-font-weight: bolder;
+}
+
+.property-item {
+    -fx-font-size: 16px;
+    -fx-fill: text-color;
+}

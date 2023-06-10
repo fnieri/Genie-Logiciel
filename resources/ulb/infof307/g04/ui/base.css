@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "Red Hat Display";
+    src: url("../fonts/static/RedHatDisplay-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src: url("../fonts/static/RedHatDisplay-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src: url("../fonts/static/RedHatDisplay-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.root {
+    /* Color palette  */
+    blue-shade-1: #193046;
+    blue-shade-2: #2A3E50;
+    blue-shade-3: #41566B;
+    blue-shade-4: #5B6E81;
+    blue-shade-5: #808F9C;
+    red-shade-1: #FF7A71;
+    green-shade-1: #83A383;
+    text-color: #FFFFFF;
+    text-light-color: #A6A6A6;
+
+    -fx-font-family: "Red Hat Display";
+    -fx-font-size: 16px;
+    -fx-background-color: blue-shade-1;
+}
+
+.navbar {
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2px;
+    -fx-border-color: blue-shade-4;
+    -fx-background-color: blue-shade-1;
+    -fx-padding: 12px 15px 12px 15px;
+}
+
+.q-logo-navbar {
+    -fx-font-size: 40; 
+    -fx-font-weight: bolder; 
+    -fx-text-fill: white;
+    -fx-padding: 0px 15px 0px 0px;
+}
+
+.navbar-button {
+    -fx-background-color: blue-shade-1;
+    -fx-font-weight: medium;
+    -fx-text-fill: text-color;
+    -fx-cursor: hand;
+}
+
+.navbar-button:hover {
+    -fx-opacity: 1;
+    -fx-background-color: blue-shade-2;
+}
+
+.main-content {
+    -fx-background-color: blue-shade-1;
+    -fx-padding: 30px 60px 60px 60px;
+}
+
+.scroll-pane {
+    -fx-padding: 1em;
+    -fx-border-width: 2px;
+    -fx-background-color: blue-shade-3;
+}
+
+
+.section-title {
+    -fx-font-size: 28px;
+    -fx-fill: text-color;
+    -fx-font-weight: bold;
+}
+
+.section-subtitle {
+    -fx-font-size: 17px;
+    -fx-fill: text-light-color;
+}
+
+.after-padding {
+    -fx-padding: 0px 0px 30px 0px;
+}
+
+.section-content-box {
+    -fx-padding: 1.5em;
+    -fx-border-width: 2px;
+    -fx-border-style: segments(10, 10, 10, 10);
+    -fx-border-color: blue-shade-4;
+}
+
+.section-subtitle-box {
+    -fx-padding: 0 1.5em 0 1.5em;
+}
+
+.btn {
+    -fx-background-color: #74b9cd;
+    -fx-font-weight: medium;
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+.btn:hover {
+    -fx-background-color: blue-shade-3;
+    -fx-opacity: 1;
+}
+
+.btn:armed {
+    -fx-opacity: 1;
+}
+
+.btn-warning {
+    -fx-background-color: #b15d5f;
+}
+
+.btn-action {
+    -fx-background-color: #8fd78e;
+
+}
+
+.login-title {
+    -fx-font-size: 40px;
+    -fx-fill: text-color;
+    -fx-font-weight: bolder;
+}
+
+.q-logo-login {
+    -fx-font-size: 70; 
+    -fx-font-weight: bolder; 
+    -fx-text-fill: white;
+}
+
+.combo-box-base {
+    -fx-background-color: blue-shade-4;
+    -fx-font-weight: medium;
+    -fx-text-fill: text-color;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+.combo-box .combo-box-popup .list-cell:hover {
+    -fx-background-color: blue-shade-3;
+}
+.myDialog{
+    -fx-background-color: blue-shade-1;
+    -fx-text-fill: text-color;
+
+}
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: blue-shade-1;
+    -fx-text-fill: text-color;
+
+
+
+}
+.myDialog > *.label.content{
+    -fx-background-color: blue-shade-1;
+    -fx-text-fill: text-color;
+}
+.myDialog:header *.header-panel{
+    -fx-background-color: blue-shade-1;
+    -fx-text-fill: text-color;
+
+}
+.myDialog:header *.header-panel *.label{
+    -fx-background-color: blue-shade-1;
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-text-fill: text-color;
+
+}
+.myDialog .button{
+    -fx-background-color: blue-shade-4;
+    -fx-font-weight: medium;
+    -fx-text-fill: text-color;
+    -fx-opacity: 0.9;
+    -fx-cursor: hand;
+}
+
+.myDialog .button:hover {
+    -fx-opacity: 0.7;
+}
+
+.myDialog > .button-bar > .container > .details-button.more {
+    -fx-text-fill: text-color;
+
+}
+
+.myDialog > .button-bar > .container > .details-button.less {
+    -fx-text-fill: text-color;
+}
+
+.myDialog > *.expandable-content {
+    -fx-background-color: blue-shade-1;
+    -fx-text-fill: text-color;
+}
+
+.myDialog > *.expandable-content *.content {
+    -fx-background-color: blue-shade-1;
+    -fx-text-fill: text-color;
+}
+
+.textLabel {
+    -fx-text-fill: text-color;
+}
