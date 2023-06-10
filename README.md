@@ -1,3 +1,8 @@
+# Project
+
+This is the project for the ULB Third year course - INFO-F307 Génie Logiciel (Software Engineering)
+It is a Quizlet-like application built on Java, with JavaFX for the frontend and Django-REST framework for the server.
+
 # Flashcards
 Flashcards est une application d’aide à l’étude basée sur un système de flashcards. Les flashcards sont un outil de révision simple et efficace ; au recto de la carte est inscrit une question et au verso la réponse à la question. L'utilisateur peut alors parcourir les questions et tester se connaissances grâce à ces cartes.
 
